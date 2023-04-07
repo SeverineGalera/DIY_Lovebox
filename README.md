@@ -7,7 +7,7 @@
 
 <p> x1 Téléphone + Navigateur </p>
 <p> x1 Chargeur </p>
-<p> Réseau Wi-Fi </p>
+<p> x1 Réseau Wi-Fi </p>
 <p> x1 Boîte </p>
 
 #
