@@ -8,7 +8,7 @@
 <p> x1 Téléphone + Navigateur </p>
 <p> x1 Chargeur </p>
 <p> x1 Réseau Wi-Fi </p>
-<p> x1 Boîte (inspirez-vous de la boîte <a href="https://raw.githubusercontent.com/LeBazarDeBryan/DIY_Lovebox/main/assets/images/lovebox.png">Lovebox</a>. </p>
+<p> x1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>. </p>
 
 #
 
