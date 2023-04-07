@@ -3,6 +3,15 @@
 
 #
 
+<h2> Requirements </h2>
+
+<p> x1 Téléphone + Navigateur </p>
+<p> x1 Chargeur </p>
+<p> Réseau Wi-Fi </p>
+<p> x1 Boîte </p>
+
+#
+
 <h2> Étape </h2>
 
 <p> 1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Forker mon projet</a>. </p>
