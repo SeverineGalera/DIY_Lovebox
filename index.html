@@ -49,31 +49,32 @@
 	<h3> D.I.Y </h3>
 	<br></br>
 	<div class="img-wrap">
-		<img id="image1" src="images/image.png">
-		<img id="image2" src="images/image.jpg">
-		<img id="image3" src="images/image.gif">
+		<img id="image1" src="images/image.png" async onerror="displayBackupImage()">
+		<img id="image2" src="images/image2.jpg" async onerror="displayBackupImage()">
+		<img id="image3" src="images/image.gif" async onerror="displayBackupImage()">
 		<img id="backupImage" src="images/nothing.png" style="display: none;">
 
 	</div>
 </center>
-<script>
-$(function() {
-  var images = $("img");
-  var mainImagesUnavailable = true;
+	<script async>
+		function displayBackupImage() {
+			var backupImage = document.getElementById("backupImage");
+			var images = document.getElementsByTagName("img");
+			var mainImagesUnavailable = true;
 
-  // Vérifier si les images principales sont indisponibles
-  images.each(function() {
-    if (this.naturalWidth > 0) {
-      mainImagesUnavailable = false;
-      return false; // sortir de la boucle each()
-    }
-  });
+			// Vérifier si les images principales sont indisponibles
+			for (var i = 0; i < images.length; i++) {
+				if (images[i].naturalWidth > 0) {
+					mainImagesUnavailable = false;
+					break;
+				}
+			}
 
-  // Afficher l'image de secours si les images principales sont indisponibles
-  if (mainImagesUnavailable) {
-    $("#backupImage").show();
-  }
-});
-</script>
+			// Afficher l'image de secours si les images principales sont indisponibles
+			if (mainImagesUnavailable) {
+				backupImage.style.display = "block";
+			}
+		}
+	</script>
 </body>
 </html>
