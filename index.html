@@ -15,15 +15,8 @@
 			font-family: 'Product Sans', sans-serif;
 		}
 		
-		#image1 {
+		img.backup {
 			display: none;
-		}
-
-		#backupImage {
-			display: block;
-			width: 300px;
-			height: 300px;
-			object-fit: cover;
 		}
 	</style>
 </head>
@@ -31,16 +24,27 @@
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img id="image1" src="images/image.png" onerror="displayBackupImage()">
-	<img id="backupImage" src="images/nothing.png">
+	<img id="image1" src="images/image.png" onerror="displayBackupImage()" style="display: block;">
+	<img id="backupImage" src="images/nothing.png" class="backup" style="display: none;">
 	
 	<script>
 		function displayBackupImage() {
 			var backupImage = document.getElementById("backupImage");
-			var image1 = document.getElementById("image1");
-			
-			backupImage.style.display = "block";
-			image1.style.display = "none";
+			var images = document.getElementsByTagName("img");
+			var mainImagesUnavailable = true;
+
+			// Vérifier si les images principales sont indisponibles
+			for (var i = 0; i < images.length; i++) {
+				if (images[i].naturalWidth > 0) {
+					mainImagesUnavailable = false;
+					break;
+				}
+			}
+
+			// Afficher l'image de secours si les images principales sont indisponibles
+			if (mainImagesUnavailable) {
+				backupImage.style.display = "block";
+			}
 		}
 	</script>
 </center>
