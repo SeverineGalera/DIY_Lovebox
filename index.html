@@ -30,16 +30,12 @@
     <h3> D.I.Y </h3>
 <br></br>
 	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage()" style="display: block;">
-	<img id="image2" src="images/image.jpg" alt="" onerror="displayBackupImage()" style="display: block;">
-	<img id="image3" src="images/image.gif" alt="" onerror="displayBackupImage()" style="display: block;">
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
 	
 	<script>
 		function displayBackupImage() {
 		  var backupImage = document.getElementById("backupImage");
 		  var mainImage = document.getElementById("image1");
-		  var mainImage = document.getElementById("image2");
-		  var mainImage = document.getElementById("image3");
 
 		  // Vérifier si l'image principale est indisponible
 		  if (mainImage.naturalWidth === 0) {
