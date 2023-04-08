@@ -14,16 +14,6 @@
 			color: #fff;
 			font-family: 'Product Sans', sans-serif;
 		}
-		
-			img {
-			width: 300px;
-			height: 300px;
-			object-fit: cover;
-			object-position: center;
-			background-color: #333;
-			display: block;
-			margin: 20px auto;
-		}
 	</style>
 </head>
 <body>
@@ -35,18 +25,12 @@
 	<img src="images/image.gif" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
 	
 	<script>
-    var imageDeSecours = "images/nothing.png";
-    var imageDeSecoursChargee = false;
-    
-    function verifierImageDeSecours() {
-        if (!imageDeSecoursChargee) {
-            var img = new Image();
-            img.onload = function() {
-                imageDeSecoursChargee = true;
-            };
-            img.src = imageDeSecours;
-        }
-    }
+		var images = document.getElementsByTagName('img');
+		for (var i = 0; i < images.length; i++) {
+			images[i].addEventListener('error', function() {
+				this.src = 'images/nothing.png';
+			});
+		}
 	</script>
 </center>
 <script src="assets/js/scale.fix.js"></script>
