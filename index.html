@@ -25,20 +25,25 @@
 	<img id="image3" src="images/image.gif" height="200" width="200">
 	
 	<script>
-		var images = document.getElementsByTagName('img');
-		for (var i = 0; i < images.length; i++) {
-			images[i].addEventListener('error', function() {
-				if (this.id == "image1") {
-					this.src = 'images/nothing.png';
-				} else if (this.id == "image2") {
-					this.src = 'images/nothing.png';
-				} else if (this.id == "image3") {
-					this.src = 'images/nothing.png';
-				} else {
-					this.style.display = 'none';
-				}
-			});
-		}
+	// Récupérer toutes les images principales et l'image de secours
+	const mainImages = document.querySelectorAll('.main-image');
+	const backupImage = document.querySelector('.backup-image');
+
+	// Vérifier si toutes les images principales sont indisponibles
+	let allImagesUnavailable = true;
+	for (let i = 0; i < mainImages.length; i++) {
+	  if (mainImages[i].naturalWidth !== 0) {
+ 	   allImagesUnavailable = false;
+ 	   break;
+	  }
+	}
+
+	// Si toutes les images principales sont indisponibles, afficher l'image de secours
+	if (allImagesUnavailable) {
+	  backupImage.style.display = 'block';
+	} else {
+	  backupImage.style.display = 'none';
+	}
 	</script>
 </center>
 <script src="assets/js/scale.fix.js"></script>
