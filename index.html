@@ -15,15 +15,15 @@
 			font-family: 'Product Sans', sans-serif;
 		}
 		
-		img {
-		    display: none;
+		#image1 {
+			display: none;
 		}
 
 		#backupImage {
-		  background-image: url('images/nothing.png');
-		  background-repeat: no-repeat;
-		  background-position: center;
-		  background-size: contain;
+			display: block;
+			width: 300px;
+			height: 300px;
+			object-fit: cover;
 		}
 	</style>
 </head>
@@ -32,17 +32,15 @@
     <h3> D.I.Y </h3>
 <br></br>
 	<img id="image1" src="images/image.png" onerror="displayBackupImage()">
-	<div id="backupImage"></div>
+	<img id="backupImage" src="images/nothing.png">
 	
 	<script>
 		function displayBackupImage() {
-		  var backupImage = document.getElementById("backupImage");
-		  var mainImage = document.getElementById("image1");
-
-		  // Vérifier si l'image principale est indisponible
-		  if (!mainImage.complete) {
-		    backupImage.style.display = "block";
-		  }
+			var backupImage = document.getElementById("backupImage");
+			var image1 = document.getElementById("image1");
+			
+			backupImage.style.display = "block";
+			image1.style.display = "none";
 		}
 	</script>
 </center>
