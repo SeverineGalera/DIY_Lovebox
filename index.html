@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="5">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <center>
+	<title>&hearts; Lovebox &hearts;</title>
 	<style>
 		body {
 			background-color: #1a1a1a;
@@ -9,37 +15,19 @@
 			font-family: 'Product Sans', sans-serif;
 		}
 		
-		.image-replace {
-			display: none;
-		}
-		.image-error {
-			display: block;
-			background-color: #eee;
-			border: 1px solid #ddd;
-			padding: 10px;
-			text-align: center;
-			font-weight: bold;
-			font-size: 16px;
-			color: #888;
+		img {
+		display: none;
 		}
 	</style>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="refresh" content="5">
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<title>&hearts; Lovebox &hearts;</title>
 </head>
 <body>
 	<h1>&hearts; Lovebox &hearts;</h1>
-	<h3> D.I.Y </h3>
-	<br></br>
-		<img id="image1" src="images/image.png" async onerror="displayBackupImage()">
-		<img id="image2" src="images/image.jpg" async onerror="displayBackupImage()">
-		<img id="image3" src="images/image.gif" async onerror="displayBackupImage()">
-		<img id="backupImage" src="images/nothing.png" style="display: none;">
-</center>
-	<script async>
+    <h3> D.I.Y </h3>
+<br></br>
+	<img id="image1" src="images/image.png" onerror="displayBackupImage()">
+	<img id="backupImage" src="images/nothing.png" style="display: none;">
+	
+	<script>
 		function displayBackupImage() {
 			var backupImage = document.getElementById("backupImage");
 			var images = document.getElementsByTagName("img");
@@ -59,5 +47,7 @@
 			}
 		}
 	</script>
+</center>
+<script src="assets/js/scale.fix.js"></script>
 </body>
 </html>
