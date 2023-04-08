@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<center>
+<center>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="5">
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -48,28 +49,31 @@
 	<h3> D.I.Y </h3>
 	<br></br>
 	<div class="img-wrap">
-		<img src="images/image.png" alt="">
-		<img src="images/image.jpg" alt="">
-		<img src="images/image.gif" alt="">
-		<img src="images/nothing.png" alt="">
+		<img id="image1" src="images/image.png">
+		<img id="image2" src="images/image.jpg">
+		<img id="image3" src="images/image.gif">
+		<img id="backupImage" src="images/nothing.png" style="display: none;">
+
 	</div>
 	<script>
-		window.onload = function() {
-			var images = document.querySelectorAll(".img-wrap img");
+		$(function() {
+		  var images = $("img");
+		  var mainImagesUnavailable = true;
 
-			for (var i = 0; i < images.length; i++) {
-				images[i].addEventListener("error", function() {
-					var parent = this.parentNode;
-					var backupImage = parent.querySelector("img:last-of-type");
-					if (this === parent.querySelector("img:first-of-type")) {
-						backupImage.style.opacity = 1;
-					} else {
-						this.remove();
-					}
-				});
-			}
-		};
+		  // Vérifier si les images principales sont indisponibles
+		  images.each(function() {
+		    if (this.naturalWidth > 0) {
+		      mainImagesUnavailable = false;
+		      return false; // sortir de la boucle each()
+		    }
+		  });
+
+		  // Afficher l'image de secours si les images principales sont indisponibles
+		  if (mainImagesUnavailable) {
+		    $("#backupImage").show();
+		  }
+		});
 	</script>
-	</center>
+</center>
 </body>
 </html>
