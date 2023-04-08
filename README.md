@@ -15,6 +15,7 @@
 <h2> Étape </h2>
 
 <p> 1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Forké mon projet</a>. </p>
+<p> 2. Déployez votre projet sur <a href="https://vercel.app">Vercel</a>. </p>
 <p> 2. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
 
 #
