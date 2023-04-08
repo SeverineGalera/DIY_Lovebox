@@ -20,15 +20,23 @@
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img src="images/image.png" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
-	<img src="images/image.jpg" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
-	<img src="images/image.gif" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
+	<img id="image1" src="images/image.png" height="200" width="200">
+	<img id="image2" src="images/image.jpg" height="200" width="200">
+	<img id="image3" src="images/image.gif" height="200" width="200">
 	
 	<script>
 		var images = document.getElementsByTagName('img');
 		for (var i = 0; i < images.length; i++) {
 			images[i].addEventListener('error', function() {
-				this.src = 'images/nothing.png';
+				if (this.id == "image1") {
+					this.src = 'images/nothing.png';
+				} else if (this.id == "image2") {
+					this.src = 'images/nothing.png';
+				} else if (this.id == "image3") {
+					this.src = 'images/nothing.png';
+				} else {
+					this.style.display = 'none';
+				}
 			});
 		}
 	</script>
