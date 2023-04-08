@@ -29,7 +29,21 @@
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
 	
 	<script>
-		
+		function checkImage(img) {
+		  const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
+		  const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
+		  return regex.test(img.src);
+		}
+
+		function displayBackupImage() {
+		  const img = document.getElementById('image1');
+		  const backupImg = document.getElementById('backup-image');
+		  if (!checkImage(img)) {
+		    img.style.display = 'none';
+		    backupImg.style.display = 'block';
+		  }
+		}
+
 		function displayBackupImage() {
 		  var backupImage = document.getElementById("backupImage");
 		  var mainImage = document.getElementById("image1");
