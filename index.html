@@ -29,11 +29,18 @@
     <img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
     
     <script>
-        function checkImage(img) {
+        function displayBackupImage() {
           const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
-          const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
-          return regex.test(img.src);
+          const backupImage = document.getElementById('backupImage');
+          const mainImage = document.getElementById('image1');
+
+          // Vérifier si l'image principale est indisponible
+          if (mainImage.naturalWidth === 0 || !extensions.includes(mainImage.src.split('.').pop())) {
+            mainImage.style.display = 'none';
+            backupImage.style.display = 'block';
+          }
         }
+
 
         function displayBackupImage() {
           const img = document.getElementById('image1');
