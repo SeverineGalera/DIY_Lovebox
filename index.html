@@ -14,9 +14,32 @@
 			color: #fff;
 			font-family: 'Product Sans', sans-serif;
 			
-			img:not([src]) {
-			display: none;
-		}
+			.image-container {
+				display: inline-block;
+				position: relative;
+			}
+
+			.image-container img {
+				max-width: 100%;
+				max-height: 100%;
+				vertical-align: middle;
+			}
+
+			.image-container:after {
+				content: "";
+				display: block;
+				padding-bottom: 100%;
+				background-color: #ddd;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+
+			.image-container img[src]:after {
+				display: none;
+			}
 	</style>
 </head>
 <body>
