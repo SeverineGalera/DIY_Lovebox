@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="5">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<center>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="5">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<title>&hearts; Lovebox &hearts;</title>
 	<style>
 		body {
@@ -15,45 +14,60 @@
 			font-family: 'Product Sans', sans-serif;
 		}
 		
-		img {
-		  border: 1px solid red;
+		.img-wrap {
+			position: relative;
+			display: inline-block;
+			max-width: 100%;
+			height: auto;
+			overflow: hidden;
 		}
 
+		.img-wrap img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+			display: block;
+			transition: opacity 0.5s ease-in-out;
+		}
+
+		.img-wrap img:last-of-type {
+			opacity: 0;
+			z-index: -1;
+		}
+
+		.img-wrap img:first-of-type {
+			z-index: 1;
+		}
 	</style>
 </head>
 <body>
 	<h1>&hearts; Lovebox &hearts;</h1>
-    <h3> D.I.Y </h3>
-<br></br>
-	<img id="image1" src="images/image.png" onerror="displayBackupImage()">
-	<img id="image2" src="images/image.jpg" onerror="displayBackupImage()">
-	<img id="image3" src="images/image.gif" onerror="displayBackupImage()">
-	<img id="backupImage" src="images/nothing.png?v=1" style="display: none;">
-	
+	<h3> D.I.Y </h3>
+	<br></br>
+	<div class="img-wrap">
+		<img src="images/image.png" alt="">
+		<img src="images/image.jpg" alt="">
+		<img src="images/image.gif" alt="">
+		<img src="images/nothing.png" alt="">
+	</div>
 	<script>
-		function displayBackupImage() {
-		  var backupImage = document.getElementById("backupImage");
-		  var images = document.getElementsByTagName("img");
-		  var mainImagesUnavailable = true;
-		  var backupImageDisplayed = false;
+		window.onload = function() {
+			var images = document.querySelectorAll(".img-wrap img");
 
-		  // Vérifier si les images principales sont indisponibles
-		  for (var i = 0; i < images.length; i++) {
-		    if (images[i].naturalWidth > 0) {
-		      mainImagesUnavailable = false;
-		      break;
-		    }
-		  }
-
-		  // Afficher l'image de secours si les images principales sont indisponibles
-		  if (mainImagesUnavailable && !backupImageDisplayed) {
-		    backupImage.style.display = "block";
-		    backupImageDisplayed = true;
-		  }
-		}
-
+			for (var i = 0; i < images.length; i++) {
+				images[i].addEventListener("error", function() {
+					var parent = this.parentNode;
+					var backupImage = parent.querySelector("img:last-of-type");
+					if (this === parent.querySelector("img:first-of-type")) {
+						backupImage.style.opacity = 1;
+					} else {
+						this.remove();
+					}
+				});
+			}
+		};
 	</script>
-</center>
-<script src="assets/js/scale.fix.js"></script>
 </body>
 </html>
