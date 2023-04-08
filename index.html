@@ -29,22 +29,15 @@
 	
 	<script>
 		function displayBackupImage() {
-			var backupImage = document.getElementById("backupImage");
-			var images = document.getElementsByTagName("img");
-			var mainImagesUnavailable = true;
+		  var backupImage = document.getElementById("backupImage");
+		  var mainImage = document.getElementById("image1");
 
-			// Vérifier si les images principales sont indisponibles
-			for (var i = 0; i < images.length; i++) {
-				if (images[i].naturalWidth > 0) {
-					mainImagesUnavailable = false;
-					break;
-				}
-			}
+		  // Vérifier si l'image principale est indisponible
+		  if (mainImage.naturalWidth === 0) {
+		    backupImage.style.display = "block";
+		  }
+		}
 
-			// Afficher l'image de secours si les images principales sont indisponibles
-			if (mainImagesUnavailable) {
-				backupImage.style.display = "block";
-			}
 		}
 	</script>
 </center>
