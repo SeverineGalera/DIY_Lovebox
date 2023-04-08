@@ -20,10 +20,11 @@
 		}
 
 		#backupImage {
-		    display: block;
+		  background-image: url('images/nothing.png');
+		  background-repeat: no-repeat;
+		  background-position: center;
+		  background-size: contain;
 		}
-
-
 	</style>
 </head>
 <body>
@@ -31,7 +32,7 @@
     <h3> D.I.Y </h3>
 <br></br>
 	<img id="image1" src="images/image.png" onerror="displayBackupImage()">
-	<img id="backupImage" src="images/nothing.png" style="display: none;">
+	<div id="backupImage"></div>
 	
 	<script>
 		function displayBackupImage() {
