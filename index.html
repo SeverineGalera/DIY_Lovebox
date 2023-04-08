@@ -7,53 +7,53 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <center>
-	<title>&hearts; Lovebox &hearts;</title>
-	<style>
-		body {
-			background-color: #1a1a1a;
-			color: #fff;
-			font-family: 'Product Sans', sans-serif;
-		}
-		
-		img.backup {
-			display: none;
-		}
-	</style>
+    <title>&hearts; Lovebox &hearts;</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: 'Product Sans', sans-serif;
+        }
+        
+        img.backup {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-	<h1>&hearts; Lovebox &hearts;</h1>
+    <h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage()" style="display: block;">
-	
-	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
-	
-	<script>
-		function checkImage(img) {
-		  const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
-		  const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
-		  return regex.test(img.src);
-		}
+    <img id="image1" src="images/image.png" alt="" onerror="displayBackupImage()" style="display: block;">
+    
+    <img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
+    
+    <script>
+        function checkImage(img) {
+          const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
+          const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
+          return regex.test(img.src);
+        }
 
-		function displayBackupImage() {
-		  const img = document.getElementById('image1');
-		  const backupImg = document.getElementById('backup-image');
-		  if (!checkImage(img)) {
-		    img.style.display = 'none';
-		    backupImg.style.display = 'block';
-		  }
-		}
+        function displayBackupImage() {
+          const img = document.getElementById('image1');
+          const backupImg = document.getElementById('backupImage');
+          if (!checkImage(img)) {
+            img.style.display = 'none';
+            backupImg.style.display = 'block';
+          }
+        }
 
-		function displayBackupImage() {
-		  var backupImage = document.getElementById("backupImage");
-		  var mainImage = document.getElementById("image1");
+        function displayBackupImage() {
+          var backupImage = document.getElementById("backupImage");
+          var mainImage = document.getElementById("image1");
 
-		  // Vérifier si l'image principale est indisponible
-		  if (mainImage.naturalWidth === 0) {
-		    backupImage.style.display = "block";
-		  }
-		}
-	</script>
+          // Vérifier si l'image principale est indisponible
+          if (mainImage.naturalWidth === 0) {
+            backupImage.style.display = "block";
+          }
+        }
+    </script>
 </center>
 <script src="assets/js/scale.fix.js"></script>
 </body>
