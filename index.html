@@ -14,18 +14,10 @@
 			color: #fff;
 			font-family: 'Product Sans', sans-serif;
 			
-			.image-replace {
-			display: none;
-		}
-		.image-error {
-			display: block;
-			background-color: #eee;
-			border: 1px solid #ddd;
-			padding: 10px;
-			text-align: center;
-			font-weight: bold;
-			font-size: 16px;
-			color: #888;
+			function imgError(image) {
+			image.onerror = "";
+			image.src = "images/nothing.png";
+			return true;
 		}
 	</style>
 </head>
@@ -33,10 +25,9 @@
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img src="images/image.png" height="200" width="200" class="image-replace" onerror="imageError(this);">
-	<img src="images/image.jpg" height="200" width="200" class="image-replace" onerror="imageError(this);">
-	<img src="images/image.gif" height="200" width="200" class="image-replace" onerror="imageError(this);">
-	<img src="images/nothing.png" height="300" width="300" class="image-replace" onerror="imageError(this);">
+	<img src="images/image.png" height="200" width="200" onerror="imgError(this);" alt="Image 1">
+	<img src="images/image.jpg" height="200" width="200" onerror="imgError(this);" alt="Image 2">
+	<img src="images/image.gif" height="200" width="200" onerror="imgError(this);" alt="Image 3">
 	
 	<script>
 		function imageError(img) {
