@@ -23,33 +23,33 @@
 <body>
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
-<br></br>
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="image2" src="images/image.gif" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
-
+	<br></br>
+	
+	<img id="image1" src="images/image1.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="image2" src="images/image2.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="backupImage" src="images/image1.png" alt="" class="backup" style="display: none;">
 	
 	<script>
-		function displayBackupImage() {
-		  var backupImage = document.getElementById("backupImage");
-		  var mainImage = document.getElementById("image1");
-		  var mainImage2 = document.getElementById("image2");
-
-		  // Vérifier si l'image principale est indisponible
-		  if (mainImage1.naturalWidth === 0 && mainImage2.naturalWidth === 0) {
-		    backupImage.style.display = "block";
-		  }
-		}
-		
 		function displayBackupImage(img) {
-		  const backupImg = document.getElementById('backupImage');
-		  if (!checkImage(img)) {
-		    img.style.display = 'none';
-		    backupImg.style.display = 'block';
-		    backupImg.src = img.dataset.backup;
-		  }
-		}
+			var backupImage = document.getElementById("backupImage");
+			var mainImage1 = document.getElementById("image1");
+			var mainImage2 = document.getElementById("image2");
 
+			// Vérifier si les deux images principales sont indisponibles
+			if (mainImage1.naturalWidth === 0 && mainImage2.naturalWidth === 0) {
+				backupImage.style.display = "block";
+			}
+			// Vérifier si l'image principale 1 est indisponible
+			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
+				mainImage1.style.display = 'none';
+				backupImage.style.display = 'block';
+			}
+			// Vérifier si l'image principale 2 est indisponible
+			else if (img === mainImage2 && mainImage2.naturalWidth === 0) {
+				mainImage2.style.display = 'none';
+				backupImage.style.display = 'block';
+			}
+		}
 	</script>
 </center>
 <script src="assets/js/scale.fix.js"></script>
