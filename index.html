@@ -40,26 +40,6 @@
             backupImage.style.display = 'block';
           }
         }
-
-
-        function displayBackupImage() {
-          const img = document.getElementById('image1');
-          const backupImg = document.getElementById('backupImage');
-          if (!checkImage(img)) {
-            img.style.display = 'none';
-            backupImg.style.display = 'block';
-          }
-        }
-
-        function displayBackupImage() {
-          var backupImage = document.getElementById("backupImage");
-          var mainImage = document.getElementById("image1");
-
-          // Vérifier si l'image principale est indisponible
-          if (mainImage.naturalWidth === 0) {
-            backupImage.style.display = "block";
-          }
-        }
     </script>
 </center>
 <script src="assets/js/scale.fix.js"></script>
