@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="refresh" content="5">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<center>
-	<title>&hearts; Lovebox &hearts;</title>
-	<style>
-		body {
-			background-color: #1a1a1a;
-			color: #fff;
-			font-family: 'Product Sans', sans-serif;
-		}
-		
-		img.backup {
-			display: none;
-		}
-	</style>
-</head>
-<body>
-	<h1>&hearts; Lovebox &hearts;</h1>
-    <h3> D.I.Y </h3>
-	<br></br>
-	
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="image2" src="images/image.gif" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
-	
-	<script>
-		function displayBackupImage(img) {
-			var backupImage = document.getElementById("backupImage");
-			var mainImage1 = document.getElementById("image1");
-			var mainImage2 = document.getElementById("image2");
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="5">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <center>
+        <title>&hearts; Lovebox &hearts;</title>
+        <style>
+            body {
+                background-color: #1a1a1a;
+                color: #fff;
+                font-family: 'Product Sans', sans-serif;
+            }
 
-			// Vérifier si les deux images principales sont indisponibles
-			if (mainImage1.naturalWidth === 0 && mainImage2.naturalWidth === 0) {
-				backupImage.style.display = "block";
-			}
-			// Vérifier si l'image principale 1 est indisponible
-			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
-				mainImage1.style.display = 'none';
-				backupImage.style.display = 'block';
-			}
-			// Vérifier si l'image principale 2 est indisponible
-			else if (img === mainImage2 && mainImage2.naturalWidth === 0) {
-				mainImage2.style.display = 'none';
-				backupImage.style.display = 'block';
-			}
-		}
-	</script>
-</center>
-<script src="assets/js/scale.fix.js"></script>
+            img.backup {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>&hearts; Lovebox &hearts;</h1>
+        <h3> D.I.Y </h3>
+        <br></br>
+        <img id="image1" src="images/image1.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+        <img id="image2" src="images/image2.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+
+        <img id="backupImage" src="images/backup.png" alt="" class="backup" style="display: none;">
+
+        <script>
+            function checkImage(img) {
+                const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
+                const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
+                return regex.test(img.src);
+            }
+
+            function displayBackupImage(img) {
+                const backupImg = document.getElementById('backupImage');
+
+                if (!checkImage(img)) {
+                    img.style.display = 'none';
+                    backupImg.style.display = 'block';
+                } else if (document.querySelectorAll('img[style="display: block;"]').length === 0) {
+                    // Si aucune image principale ne s'affiche, afficher l'image de secours
+                    backupImg.style.display = 'block';
+                }
+            }
+        </script>
+    </center>
+    <script src="assets/js/scale.fix.js"></script>
 </body>
 </html>
