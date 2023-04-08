@@ -51,7 +51,7 @@
 	<div class="image-container"><img src="images/image.gif" height="200" width="200" onerror="imgError(this);"></div>
 	
 	<script>
-		function imgError(image) {
+		function imgError(this) {
 			image.onerror = "";
 			image.src = "images/nothing.png";
 			return true;
