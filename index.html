@@ -24,8 +24,8 @@
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;" data-backup="images/nothing.png">
-	<img id="image2" src="images/image.gif" alt="" onerror="displayBackupImage(this)" style="display: block;" data-backup="images/nothing.png">
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="image2" src="images/image.gif" alt="" onerror="displayBackupImage(this)" style="display: block;">
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
 
 	
@@ -33,6 +33,7 @@
 		function displayBackupImage() {
 		  var backupImage = document.getElementById("backupImage");
 		  var mainImage = document.getElementById("image1");
+		  var mainImage2 = document.getElementById("image2");
 
 		  // Vérifier si l'image principale est indisponible
 		  if (mainImage.naturalWidth === 0) {
