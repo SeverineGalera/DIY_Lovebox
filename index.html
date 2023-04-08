@@ -14,10 +14,8 @@
 			color: #fff;
 			font-family: 'Product Sans', sans-serif;
 			
-			function imgError(image) {
-			image.onerror = "";
-			image.src = "images/nothing.png";
-			return true;
+			img:not([src]) {
+			display: none;
 		}
 	</style>
 </head>
@@ -30,10 +28,10 @@
 	<img src="images/image.gif" height="200" width="200" onerror="imgError(this);">
 	
 	<script>
-		function imageError(img) {
-			img.style.display = "none";
-			var errorDiv = document.getElementsByClassName("image-error")[0];
-			errorDiv.style.display = "block";
+		function imgError(image) {
+			image.onerror = "";
+			image.src = "images/nothing.png";
+			return true;
 		}
 	</script>
 </center>
