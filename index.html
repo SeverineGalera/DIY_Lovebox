@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <center>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="refresh" content="5">
@@ -9,52 +8,15 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 	<title>&hearts; Lovebox &hearts;</title>
-	<style>
-		body {
-			background-color: #1a1a1a;
-			color: #fff;
-			font-family: 'Product Sans', sans-serif;
-		}
-		
-		.img-wrap {
-			position: relative;
-			display: inline-block;
-			max-width: 100%;
-			height: auto;
-			overflow: hidden;
-		}
-
-		.img-wrap img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: auto;
-			display: block;
-			transition: opacity 0.5s ease-in-out;
-		}
-
-		.img-wrap img:last-of-type {
-			opacity: 0;
-			z-index: -1;
-		}
-
-		.img-wrap img:first-of-type {
-			z-index: 1;
-		}
-	</style>
 </head>
 <body>
 	<h1>&hearts; Lovebox &hearts;</h1>
 	<h3> D.I.Y </h3>
 	<br></br>
-	<div class="img-wrap">
 		<img id="image1" src="images/image.png" async onerror="displayBackupImage()">
 		<img id="image2" src="images/image2.jpg" async onerror="displayBackupImage()">
 		<img id="image3" src="images/image.gif" async onerror="displayBackupImage()">
 		<img id="backupImage" src="images/nothing.png" style="display: none;">
-
-	</div>
 </center>
 	<script async>
 		function displayBackupImage() {
