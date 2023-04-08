@@ -14,15 +14,25 @@
 			color: #fff;
 			font-family: 'Product Sans', sans-serif;
 		}
+		
+			img {
+			width: 300px;
+			height: 300px;
+			object-fit: cover;
+			object-position: center;
+			background-color: #333;
+			display: block;
+			margin: 20px auto;
+		}
 	</style>
 </head>
 <body>
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img src="images/image.png" height="200" width="200" onerror="this.onerror=null;verifierImageDeSecours();this.src=imageDeSecours;" />
-	<img src="images/image.jpg" height="200" width="200" onerror="this.onerror=null;verifierImageDeSecours();this.src=imageDeSecours;" />
-	<img src="images/image.gif" height="200" width="200" onerror="this.onerror=null;verifierImageDeSecours();this.src=imageDeSecours;" />
+	<img src="images/image.png" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
+	<img src="images/image.jpg" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
+	<img src="images/image.gif" height="200" width="200" onerror="this.onerror=null;this.src='images/nothing.png';">
 	
 	<script>
     var imageDeSecours = "images/nothing.png";
