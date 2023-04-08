@@ -24,13 +24,14 @@
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
 <br></br>
-	<img id="image1" src="images/image.*" alt="" onerror="displayBackupImage()" style="display: block;">
-	
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage()" style="display: block;">
+	<p id="imageExtension"></p>
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
+
 	
 	<script>
 		function checkImage(img) {
-		  const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp', 'svg'];
+		  const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
 		  const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
 		  return regex.test(img.src);
 		}
@@ -38,6 +39,8 @@
 		function displayBackupImage() {
 		  const img = document.getElementById('image1');
 		  const backupImg = document.getElementById('backupImage');
+		  const ext = img.src.split('.').pop();
+		  document.getElementById('imageExtension').innerHTML = `Image extension: .${ext}`;
 		  if (!checkImage(img)) {
 		    img.style.display = 'none';
 		    backupImg.style.display = 'block';
