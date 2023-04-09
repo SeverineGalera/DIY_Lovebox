@@ -1,4 +1,4 @@
-<h1 align="center"> DIY Lovebox </h1>
+<h1 align="center"> ❤ DIY Lovebox ❤ </h1>
 <h3 align="center"> avec HTML, CSS et JavaScript </h3>
 
 #
