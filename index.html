@@ -25,18 +25,24 @@
    	<h3> D.I.Y </h3>
 	<br></br>
 	
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage()" style="display: block;">
-	<img id="image2" src="images/image.gif" alt="" onerror="displayBackupImage()" style="display: block;">
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage('image1', 'backupImage')" style="display: block;">
+	
+	<img id="image2" src="images/image.jpg" alt="" onerror="displayBackupImage('image2', 'backupImage')" style="display: block;">
 	
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
-	
+
 	<script>
-		function displayBackupImage(image) {
-			const backupImage = document.getElementById('backupImage');
-			if (image.naturalWidth === 0) {
-				image.style.display = 'none';
-				backupImage.style.display = 'block';
-			}
+		function displayBackupImage(imageId, backupId) {
+		  const img = document.getElementById(imageId);
+		  const backupImg = document.getElementById(backupId);
+		  if (!checkImage(img)) {
+		    img.style.display = 'none';
+		    backupImg.style.display = 'block';
+		  }
+		  else {
+		    img.style.display = 'block';
+		    backupImg.style.display = 'none';
+		  }
 		}
 	</script>
 </center>
