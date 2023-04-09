@@ -33,13 +33,8 @@
 		function displayBackupImage(img) {
 			var backupImage = document.getElementById("backupImage");
 			}
-			// Vérifier si l'image principale 1 est indisponible
-			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
-				mainImage1.style.display = 'none';
-				backupImage.style.display = 'block';
-			}
-			// Vérifier si l'image principale 2 est indisponible
-			else if (img === mainImage2 && mainImage2.naturalWidth === 0) {
+			// Vérifier si l'image principale 1 et 2 sont indisponible
+			else if (img === mainImage1 && mainImage2.naturalWidth === 0) {
 				mainImage1.style.display = 'none';
 				backupImage.style.display = 'block';
 			}
