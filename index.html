@@ -25,18 +25,33 @@
     <h3> D.I.Y </h3>
 	<br></br>
 	
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage1()" style="display: block;">
+	<img id="image2" src="images/image.jpg" alt="" onerror="displayBackupImage2()" style="display: block;">
+	<img id="backupImage" src="images/backup.png" alt="" class="backup" style="display: none;">
 	
 	<script>
-		function displayBackupImage(img) {
-			var backupImage = document.getElementById("backupImage");
-			}
-			// Vérifier si l'image principale 1 est indisponible
-			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
-				mainImage1.style.display = 'none';
-				backupImage.style.display = 'block';
-			}
+		function checkImage(img) {
+		  const extensions = ['png', 'jpg', 'jpeg', 'gif', 'bmp'];
+		  const regex = new RegExp(`\\.(${extensions.join('|')})$`, 'i');
+		  return regex.test(img.src);
+		}
+
+		function displayBackupImage1() {
+		  const img = document.getElementById('image1');
+		  const backupImg = document.getElementById('backupImage');
+		  if (!checkImage(img)) {
+		    img.style.display = 'none';
+		    backupImg.style.display = 'block';
+		  }
+		}
+
+		function displayBackupImage2() {
+		  const img = document.getElementById('image2');
+		  const backupImg = document.getElementById('backupImage');
+		  if (!checkImage(img)) {
+		    img.style.display = 'none';
+		    backupImg.style.display = 'block';
+		  }
 		}
 	</script>
 </center>
