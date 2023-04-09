@@ -25,24 +25,24 @@
    	<h3> D.I.Y </h3>
 	<br></br>
 	
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage('image1', 'backupImage')" style="display: block;">
-	
-	<img id="image2" src="images/image.jpg" alt="" onerror="displayBackupImage('image2', 'backupImage')" style="display: block;">
-	
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="image2" src="images/image.jpg" alt="" onerror="displayBackupImage(this)" style="display: block;">
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
-
+	
 	<script>
-		function displayBackupImage(imageId, backupId) {
-		  const img = document.getElementById(imageId);
-		  const backupImg = document.getElementById(backupId);
-		  if (!checkImage(img)) {
-		    img.style.display = 'none';
-		    backupImg.style.display = 'block';
-		  }
-		  else {
-		    img.style.display = 'block';
-		    backupImg.style.display = 'none';
-		  }
+		function displayBackupImage(img) {
+			var backupImage = document.getElementById("backupImage");
+			}
+			// Vérifier si l'image principale 1 est indisponible
+			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
+				mainImage1.style.display = 'none';
+				backupImage.style.display = 'block';
+			}
+			// Vérifier si l'image principale 2 est indisponible
+			else if (img === mainImage2 && mainImage2.naturalWidth === 0) {
+				mainImage1.style.display = 'none';
+				backupImage.style.display = 'block';
+			}
 		}
 	</script>
 </center>
