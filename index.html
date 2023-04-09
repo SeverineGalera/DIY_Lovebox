@@ -15,38 +15,28 @@
 			font-family: 'Product Sans', sans-serif;
 		}
 		
-		.image-replace {
+		img.backup {
 			display: none;
-		}
-		.image-error {
-			display: block;
-			background-color: #eee;
-			border: 1px solid #ddd;
-			padding: 10px;
-			text-align: center;
-			font-weight: bold;
-			font-size: 16px;
-			color: #888;
 		}
 	</style>
 </head>
 <body>
 	<h1>&hearts; Lovebox &hearts;</h1>
     <h3> D.I.Y </h3>
-<br></br>
-	<img src="images/image.png" height="200" width="200" onerror="imgError(this);">
-	<img src="images/image.jpg" height="200" width="200" onerror="imgError(this);">
-	<img src="images/image.gif" height="200" width="200" onerror="imgError(this);">
-	<img src="images/nothing.png" height="300" width="300" onerror="imgError(this);">
+	<br></br>
+	
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
 	
 	<script>
-		function imgError(img) {
-			img.style.display = "none";
-			var errorDiv = document.getElementsByClassName("image-error")[0];
-			errorDiv.style.display = "block";
-			image.onerror = "";
-			image.src = "images/nothing.png";
-			return true;
+		function displayBackupImage(img) {
+			var backupImage = document.getElementById("backupImage");
+			}
+			// Vérifier si l'image principale 1 est indisponible
+			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
+				mainImage1.style.display = 'none';
+				backupImage.style.display = 'block';
+			}
 		}
 	</script>
 </center>
