@@ -15,9 +15,9 @@
 <h2> 🌟 Étape 🌟 </h2>
 
 <p> 1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Forké mon projet</a>. </p>
-<p> 2. Modifiez cette <a href="index.html#L28">ligne</a> si vous voulez mettre d'autre format d'image. </p>
+<p> 2. Modifiez cette <a href="index.html#L28">ligne</a> si vous voulez mettre un autre nom ou un autre format d'image. </p>
 <p> 3. Déployez votre projet sur <a href="https://vercel.app">Vercel</a>. </p>
-<p> 4. Renommez vos images en "image.png" (ou le format que vous avez mis) </p>
+<p> 4. Renommez vos images en "image.png" (ou le nom ou le format que vous avez mis) </p>
 <p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
 
 #
