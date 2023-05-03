@@ -21,22 +21,25 @@
    	<h3> D.I.Y </h3>
 	<br></br>
 	
-	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="image2" src="images/image2.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="image3" src="images/image3.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="image4" src="images/image4.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	
-	<img id="backupImage" src="images/nothing.png" alt="" style="display: none;">
-	
+	<img src="images/image1.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image2.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image3.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image4.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image5.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image6.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image7.png" onerror="replaceWithBackupImage(this)">
+	<img src="images/image8.png" onerror="replaceWithBackupImage(this)">
+
+	<img id="backupImage" src="images/nothing.png" style="display: none;">
+
 	<script>
-		function displayBackupImage(img) {
-			var backupImage = document.getElementById("backupImage");
-			if (img.naturalWidth === 0) {
-				img.style.display = 'none';
-				backupImage.style.display = 'block';
-			}
-		}
+	function replaceWithBackupImage(img) {
+	  img.style.display = "none";
+	  var backupImage = document.getElementById("backupImage");
+	  backupImage.style.display = "block";
+	}
 	</script>
+
 </center>
 <script src="assets/js/scale.fix.js"></script>
 </body>
