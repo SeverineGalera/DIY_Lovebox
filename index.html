@@ -31,10 +31,14 @@
 	<script>
 		function displayBackupImage(img) {
 			var backupImage = document.getElementById("backupImage");
+			// Vérifier si l'image principale est indisponible
+			if (img.naturalWidth === 0) {
+				img.style.display = 'none';
+				backupImage.style.display = 'block';
 			}
 			// Vérifier si l'image principale 1 est indisponible
-			else if (img === mainImage1 && mainImage1.naturalWidth === 0) {
-				mainImage1.style.display = 'none';
+			else if (img === document.getElementById("image1") && img.naturalWidth === 0) {
+				img.style.display = 'none';
 				backupImage.style.display = 'block';
 			}
 		}
