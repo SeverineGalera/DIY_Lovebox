@@ -26,30 +26,15 @@
 	<br></br>
 	
 	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
-	
 	<img id="image2" src="images/image2.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="backupImage2" src="images/nothing.png" alt="" class="backup" style="display: none;">
-	
 	<img id="image3" src="images/image3.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
-	<img id="backupImage3" src="images/nothing.png" alt="" class="backup" style="display: none;">
+	<img id="image4" src="images/image4.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	
+	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
 	
 	<script>
 		function displayBackupImage(img) {
-			var backupImage;
-			
-			// Vérifier quelle image de sauvegarde utiliser
-			if (img === document.getElementById("image1")) {
-				backupImage = document.getElementById("backupImage");
-			}
-			else if (img === document.getElementById("image2")) {
-				backupImage = document.getElementById("backupImage2");
-			}
-			else if (img === document.getElementById("image3")) {
-				backupImage = document.getElementById("backupImage3");
-			}
-			
-			// Vérifier si l'image principale est indisponible
+			var backupImage = document.getElementById("backupImage");
 			if (img.naturalWidth === 0) {
 				img.style.display = 'none';
 				backupImage.style.display = 'block';
