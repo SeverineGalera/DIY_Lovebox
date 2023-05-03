@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="5">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<center>
+	<title>&hearts; Lovebox &hearts;</title>
+	<style>
+		body {
+			background-color: #1a1a1a;
+			color: #fff;
+			font-family: 'Product Sans', sans-serif;
+		}
+		
+		img.backup {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>&hearts; Lovebox &hearts;</h1>
+   	<h3> D.I.Y </h3>
+	<br></br>
+	
+	<img id="image1" src="images/image.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
+	
+	<img id="image2" src="images/image2.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="backupImage2" src="images/nothing2.png" alt="" class="backup" style="display: none;">
+	
+	<img id="image3" src="images/image3.png" alt="" onerror="displayBackupImage(this)" style="display: block;">
+	<img id="backupImage3" src="images/nothing3.png" alt="" class="backup" style="display: none;">
+	
+	<script>
+		function displayBackupImage(img) {
+			var backupImage;
+			
+			// Vérifier quelle image de sauvegarde utiliser
+			if (img === document.getElementById("image1")) {
+				backupImage = document.getElementById("backupImage");
+			}
+			else if (img === document.getElementById("image2")) {
+				backupImage = document.getElementById("backupImage2");
+			}
+			else if (img === document.getElementById("image3")) {
+				backupImage = document.getElementById("backupImage3");
+			}
+			
+			// Vérifier si l'image principale est indisponible
+			if (img.naturalWidth === 0) {
+				img.style.display = 'none';
+				backupImage.style.display = 'block';
+			}
+		}
+	</script>
+</center>
+<script src="assets/js/scale.fix.js"></script>
+</body>
+</html>
