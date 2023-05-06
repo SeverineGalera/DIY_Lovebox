@@ -14,7 +14,7 @@
 <p> ×1 Téléphone + Navigateur </p>
 <p> ×1 Chargeur </p>
 <p> ×1 Réseau Wi-Fi ou données mobile </p>
-<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) ou utilisé un support pour maintenir votre appareil (<a href="https://github.com/LeBazarDeBryan/DIY_Lovebox#Exemple">Exemple</a>). </p>
+<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) ou utilisé un support pour maintenir votre appareil (<a href="https://github.com/LeBazarDeBryan/DIY_Lovebox#Exemple">Exemple</a>) </p>
 
 #
 
