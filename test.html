@@ -28,38 +28,44 @@
 	<div id="imageContainer"></div>
 
 	<script>
-		var imageSources = [
-			"images/image.png",
-			"images/image.jpg",
-			"images/image.gif",
-			"images/image.bmp"
-		];
+	    function replaceWithBackupImage(img) {
+	        img.style.display = "none";
+	        checkAllImagesLoaded();
+	    }
 
-		var imageContainer = document.getElementById("imageContainer");
+	    var imageSources = [
+	        "images/image.png",
+	        "images/image.jpg",
+	        "images/image.gif",
+	        "images/image.bmp"
+	    ];
 
-		for (var i = 0; i < imageSources.length; i++) {
-			var image = new Image();
-			image.onload = function() {
-				imageContainer.appendChild(this);
-			};
-			image.onerror = function() {
-				this.style.display = "none";
-				checkAllImagesLoaded();
-			};
-			image.src = imageSources[i];
-		}
+	    var imageContainer = document.getElementById("imageContainer");
 
-		function checkAllImagesLoaded() {
-			var backupImage = document.getElementById("backupImage");
-			var allImages = document.querySelectorAll("#imageContainer img");
+	    for (var i = 0; i < imageSources.length; i++) {
+	        var image = new Image();
+	        image.onload = function() {
+	            imageContainer.appendChild(this);
+	        };
+	        image.onerror = function() {
+	            this.style.display = "none";
+	            checkAllImagesLoaded();
+	        };
+	        image.src = imageSources[i];
+	    }
 
-			if (allImages.length == 0) {
-				backupImage.style.display = "block";
-			} else {
-				backupImage.style.display = "none";
-			}
-		}
+	    function checkAllImagesLoaded() {
+	        var backupImage = document.getElementById("backupImage");
+	        var allImages = document.querySelectorAll("#imageContainer img");
+
+	        if (allImages.length == 0) {
+	            backupImage.style.display = "block";
+	        } else {
+	            backupImage.style.display = "none";
+	        }
+	    }
 	</script>
+
 	
 	<img id="backupImage" src="images/nothing.png" alt="" class="backup" style="display: none;">
 </center>
