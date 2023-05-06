@@ -1,5 +1,5 @@
-<h1 align="center"> ❤ DIY Lovebox ❤ </h1>
-<h3 align="center"> ✨ avec HTML, CSS et JavaScript ✨ </h3>
+<p align="center"><img src="assets/images/Logo.png" height="200" width="550" /></p>
+<h3 align="center">✨ avec HTML, CSS et JavaScript ✨</h3>
 <div align="center">
 
 <img src="https://img.shields.io/github/stars/LeBazarDeBryan/DIY_Lovebox?label=%C3%89toile" />
@@ -9,7 +9,7 @@
 
 #
 
-<h2> ⭐ Requirements ⭐ </h2>
+<h2>⭐ Requirements ⭐</h2>
 
 <p> x1 Téléphone + Navigateur </p>
 <p> x1 Chargeur </p>
@@ -18,7 +18,7 @@
 
 #
 
-<h2> 🌟 Étape 🌟 </h2>
+<h2>🌟 Étape 🌟</h2>
 
 <p> 1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Forké mon projet</a>. </p>
 <p> 2. Modifiez cette <a href="index.html#L28">ligne</a> si vous voulez mettre un autre nom ou un autre format d'image. </p>
@@ -28,13 +28,13 @@
 
 #
 
-<h2> 💞 Utile 💞 </h2>
+<h2>💞 Utile 💞</h2>
 
 <p> Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ! </p>
 
 #
 
-<h2> 🌠 Demo 🌠 </h2>
+<h2>🌠 Demo 🌠</h2>
 
 <p> <a href="https://lebazardebryan.github.io/DIY_Lovebox/"> Github </a></p>
 <p> <a href="https://diy-lovebox.vercel.app/"> Vercel </a></p>
