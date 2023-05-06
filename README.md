@@ -38,7 +38,7 @@
 <p> 7. Vous devrais voir un fichier avec le nom "app-debug.apk" c'est l'application. Transférer la sur votre appareil Android. </p>
 <p> 8. Installer l'application sur votre appareil puis ouvrer la. </p>
 <p> 9. Pour rafraichire appuyer sur "Refresh". </p>
-<p> 10. Et voila ! Vous avez votre <a href="assets/images/lovebox.png">Lovebox</a>. </p>
+<p> 10. Et voila ! Vous avez votre <a href="assets/images/lovebox.png?raw=true">Lovebox</a>. </p>
 
 #
 
