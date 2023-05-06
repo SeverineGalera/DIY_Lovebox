@@ -26,7 +26,7 @@
 <p> 4. Renommez vos images en "image.png" (ou le nom ou le format que vous avez mis) </p>
 <p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
 
-<h3>Optionnel</h3>
+<h3>↪ Optionnel ↩</h3>
 
 <p> 0. Vous pouvez faire une application Android. (Vous avez besoin d'Android Studio). </p>
 <p> 1. <a href="app">Télécharger ce dossier</a>. </p>
