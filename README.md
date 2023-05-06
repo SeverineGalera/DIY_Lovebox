@@ -14,7 +14,7 @@
 <p> ×1 Téléphone + Navigateur </p>
 <p> ×1 Chargeur </p>
 <p> ×1 Réseau Wi-Fi ou données mobile </p>
-<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) ou utilisé un support pour maintenir votre appareil. </p>
+<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) ou utilisé un support pour maintenir votre appareil. (<a href="https://github.com/LeBazarDeBryan/DIY_Lovebox#Exemple">Exemple</a>) </p>
 
 #
 
@@ -52,3 +52,10 @@
 
 <p> <a href="https://lebazardebryan.github.io/DIY_Lovebox/"> Github </a></p>
 <p> <a href="https://diy-lovebox.vercel.app/"> Vercel </a></p>
+
+#
+
+<h2> Exemple </h2>
+
+<img src="assets/images/image1.png">
+<img src="assets/images/image2.png">
