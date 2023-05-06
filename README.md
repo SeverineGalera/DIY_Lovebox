@@ -1,5 +1,11 @@
 <h1 align="center"> ❤ DIY Lovebox ❤ </h1>
 <h3 align="center"> ✨ avec HTML, CSS et JavaScript ✨ </h3>
+<div align="center">
+
+<img src="https://img.shields.io/github/stars/LeBazarDeBryan/DIY_Lovebox?label=%C3%89toile" />
+<img src="https://img.shields.io/github/forks/LeBazarDeBryan/DIY_Lovebox?label=Fork" />
+<img src="https://img.shields.io/github/watchers/LeBazarDeBryan/DIY_Lovebox?label=Watching" />
+<img src="https://img.shields.io/github/issues/LeBazarDeBryan/DIY_Lovebox?label=Issues" /> </div>
 
 #
 
