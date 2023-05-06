@@ -27,8 +27,9 @@
 <p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
 
 <h3>Optionnel</h3>
+
 <p> 0. Vous pouvez faire une application Android. (Vous avez besoin d'Android Studio). </p>
-<p> 1. <a href="app">Téléchargé ce dossier</a>. </p>
+<p> 1. <a href="app">Télécharger ce dossier</a>. </p>
 <p> 2. Ouvrer ce dossier avec <a href="https://developer.android.com/studio">Android Studio</a>. </p>
 <p> 3. Cliquer sur "Project", Aller dans app/java/fr.lebazardebryan.lovebox/MainActivity </p>
 <p> 4. Aller à la ligne 18 puis changer "remplacer avec votre url" avec votre site web. </p>
