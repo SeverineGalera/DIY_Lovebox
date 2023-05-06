@@ -55,7 +55,7 @@
 
 #
 
-<h2> Exemple </h2>
+<h2>Exemple</h2>
 
-<img src="assets/images/image1.png">
-<img src="assets/images/image2.png">
+<p align="center"><img src="assets/images/image1.png">
+<img src="assets/images/image2.png"></p>
