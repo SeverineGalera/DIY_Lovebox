@@ -27,7 +27,17 @@
 <p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
 
 <h3>Optionnel</h3>
-<p> Bientôt </p>
+<p> 0. Vous pouvez faire une application Android. (Vous avez besoin d'Android Studio). </p>
+<p> 1. <a href="app">Téléchargé ce dossier</a>. </p>
+<p> 2. Ouvrer ce dossier avec <a href="https://developer.android.com/studio">Android Studio</a>. </p>
+<p> 3. Cliquer sur "Project", Aller dans app/java/fr.lebazardebryan.lovebox/MainActivity </p>
+<p> 4. Aller à la ligne 18 puis changer "remplacer avec votre url" avec votre site web. </p>
+<p> 5. Cliquer sur "Build" > "Build Bundle(s) / APK(s)" > Build APK(s) </p>
+<p> 6. Après avoir attendu vous devrais avoir une notification quand c'est fini. Cliquer sur "locate". </p>
+<p> 7. Vous devrais voir un fichier avec le nom "app-debug.apk" c'est l'application. Transférer la sur votre appareil Android. </p>
+<p> 8. Installer l'application sur votre appareil puis ouvrer la. </p>
+<p> 9. Pour rafraichire appuyer sur "Refresh". </p>
+<p> 10. Et voila ! Vous avez votre <a href="assets/images/lovebox.png">Lovebox</a>. </p>
 
 #
 
