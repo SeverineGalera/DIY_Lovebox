@@ -27,6 +27,7 @@
 <p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
 
 <h3>Optionnel</h3>
+<p> Bientôt </p>
 
 #
 
