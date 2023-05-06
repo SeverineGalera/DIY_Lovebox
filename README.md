@@ -13,8 +13,8 @@
 
 <p> ×1 Téléphone + Navigateur </p>
 <p> ×1 Chargeur </p>
-<p> ×1 Réseau Wi-Fi </p>
-<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>). Ou utilisé un support pour maintenir votre appareil. </p>
+<p> ×1 Réseau Wi-Fi ou données mobile </p>
+<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) ou utilisé un support pour maintenir votre appareil. </p>
 
 #
 
@@ -25,7 +25,7 @@
 <p> 3. Déployez votre projet sur <a href="https://vercel.app">Vercel</a> (Rapide) ou <a href="https://pages.github.com">Github Pages</a> (Long). </p>
 <p> 4. Renommez vos images en "image.png" (ou le nom ou le format que vous avez mis) </p>
 <p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
-#
+
 <h3>Optionnel</h3>
 
 #
