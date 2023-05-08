@@ -26,7 +26,7 @@
 	<br></br>
 
 	<div id="videoContainer"></div>
-	<video id="backupVideo" src="backup_video.mp4"></video>
+	<video id="backupVideo" src="nothing.png"></video>
 
 	<script>
 	    var videoSources = [
@@ -40,8 +40,8 @@
 	    for (var i = 0; i < videoSources.length; i++) {
 	        var video = document.createElement("video");
 	        video.setAttribute("controls", true);
-	        video.style.maxWidth = "100%";
-	        video.style.maxHeight = "100%";
+	        video.style.maxWidth = "50%";
+	        video.style.maxHeight = "50%";
 	        video.onloadedmetadata = function() {
 	            videoContainer.appendChild(this);
 	        };
