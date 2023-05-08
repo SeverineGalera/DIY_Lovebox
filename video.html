@@ -25,53 +25,44 @@
    	<h3> D.I.Y </h3>
 	<br></br>
 
-	<div id="videoContainer">
-  <img id="backupVideo" src="images/nothing.jpg">
-  </div>
+	<div id="videoContainer"></div>
+	<video id="backupVideo" src="backup_video.mp4"></video>
 
-  <script>
-    var video = document.createElement("video");
-    var videoSources = [
-      {
-        src: "images/image.mp4",
-        type: "video/mp4"
-      },
-      {
-        src: "images/image.webm",
-        type: "video/webm"
-      }
-    ];
-    var videoContainer = document.getElementById("videoContainer");
+	<script>
+	    var videoSources = [
+	        "images/image.mp4",
+	        "images/image.webm",
+	        "images/image.ogv"
+	    ];
 
-    video.addEventListener("loadeddata", function() {
-      videoContainer.appendChild(this);
-    });
+	    var videoContainer = document.getElementById("videoContainer");
 
-    video.addEventListener("error", function() {
-      this.style.display = "none";
-      checkAllVideosLoaded();
-    });
+	    for (var i = 0; i < videoSources.length; i++) {
+	        var video = document.createElement("video");
+	        video.setAttribute("controls", true);
+	        video.style.maxWidth = "100%";
+	        video.style.maxHeight = "100%";
+	        video.onloadedmetadata = function() {
+	            videoContainer.appendChild(this);
+	        };
+	        video.onerror = function() {
+	            this.style.display = "none";
+	            checkAllVideosLoaded();
+	        };
+	        video.src = videoSources[i];
+	    }
 
-    for (var i = 0; i < videoSources.length; i++) {
-      var source = document.createElement("source");
-      source.src = videoSources[i].src;
-      source.type = videoSources[i].type;
-      video.appendChild(source);
-    }
+	    function checkAllVideosLoaded() {
+	        var backupVideo = document.getElementById("backupVideo");
+	        var allVideos = document.querySelectorAll("#videoContainer video");
 
-    function checkAllVideosLoaded() {
-      var backupVideo = document.getElementById("backupVideo");
-      var allVideos = document.querySelectorAll("#videoContainer video");
-
-      if (allVideos.length == 0) {
-        backupVideo.style.display = "block";
-      } else {
-        backupVideo.style.display = "none";
-      }
-    }
-
-    video.load();
-  </script>
+	        if (allVideos.length == 0) {
+	            backupVideo.style.display = "block";
+	        } else {
+	            backupVideo.style.display = "none";
+	        }
+	    }
+	</script>
   
 </center>
 <script src="assets/js/scale.fix.js"></script>
