@@ -54,6 +54,11 @@
 	    function checkAllVideosLoaded() {
 	        var backupVideo = document.getElementById("backupVideo");
 	        var allVideos = document.querySelectorAll("#videoContainer video");
+		    
+	    setTimeout(function() {
+		    var video = document.getElementById("myVideo");
+		    video.play();
+			  }, 5000); // Démarrer la vidéo après 5 secondes
 
 	        if (allVideos.length == 0) {
 	            backupVideo.style.display = "block";
