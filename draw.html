@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>  
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <title>DIY Lovebox - Dessiner</title>
+	<style>
+		body {
+			background-color: #1a1a1a;
+			color: #fff;
+			font-family: 'Product Sans', sans-serif;
+		}
+	</style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+    <br>
+    <button onclick="save()">Enregistrer</button>
+	<button id="effacer">Effacer</button>
+	<br></br>
+	<label for="color">Couleur :</label>
+	<input type="color" id="color" onchange="changeColor()">
+	<br></br>
+	<label for="size">Taille :</label>
+	<input type="range" id="size" min="1" max="20" value="5" onchange="changeSize()">
+	<br></br>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      var painting = false;
+	  var color = "#000";
+	  var size = 5;
+
+      canvas.addEventListener("mousedown", startPosition);
+      canvas.addEventListener("mouseup", finishedPosition);
+      canvas.addEventListener("mousemove", draw);
+
+      function startPosition(event) {
+        painting = true;
+        draw(event);
+      }
+
+      function finishedPosition() {
+        painting = false;
+        ctx.beginPath();
+      }
+
+      function draw(event) {
+        if (!painting) return;
+		ctx.strokeStyle = color;
+        ctx.lineWidth = size;
+        ctx.lineCap = "round";
+        ctx.lineTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+      }
+
+      function save() {
+        var image = canvas.toDataURL("image/png");
+        var link = document.createElement("a");
+        link.download = "image.png";
+        link.href = image;
+        link.click();
+      }
+	  
+		document.getElementById("effacer").addEventListener("click", function() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+		});
+		
+		function changeColor() {
+			color = document.getElementById('color').value;
+		}
+		
+		function changeSize() {
+			size = document.getElementById('size').value;
+		}
+    </script>
+  </body>
+</html>
