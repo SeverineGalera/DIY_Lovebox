@@ -8,7 +8,7 @@
     <title>DIY Lovebox - Dessiner</title>
 	<style>
 		body {
-			background-color: #1a1a1a;
+			background-color: #000000;
 			color: #fff;
 			font-family: 'Product Sans', sans-serif;
 		}
@@ -16,7 +16,7 @@
   </head>
   <center>
   <body>
-    <canvas id="canvas" width="500" height="500" style="border: 1px solid black;"></canvas>
+    <canvas id="canvas" width="500" height="500" style="border: 1px solid white;"></canvas>
     <br>
     <button onclick="save()">Enregistrer</button>
 	<button id="effacer">Effacer</button>
@@ -25,13 +25,13 @@
 	<input type="color" id="color" onchange="changeColor()">
 	<br></br>
 	<label for="size">Taille :</label>
-	<input type="range" id="size" min="1" max="20" value="5" onchange="changeSize()">
+	<input type="range" id="size" min="1" max="50" value="5" onchange="changeSize()">
 	<br></br>
     <script>
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       var painting = false;
-	  var color = "#000";
+	  var color = "#fff";
 	  var size = 5;
 
       canvas.addEventListener("mousedown", startPosition);
