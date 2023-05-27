@@ -36,7 +36,7 @@
 <p> 5. Cliquer sur "Build" > "Build Bundle(s) / APK(s)" > Build APK(s) </p>
 <p> 6. Après avoir attendu vous devrais avoir une notification quand c'est fini. Cliquer sur "locate". </p>
 <p> 7. Vous devrais voir un fichier avec le nom "app-debug.apk" c'est l'application. Transférer la sur votre appareil Android. </p>
-<p> 8. Installer l'application sur votre appareil puis ouvrer la. </p>
+<p> 8. Installer l'application sur votre appareil puis ouvrez la. </p>
 <p> 9. Pour rafraichire appuyer sur "Refresh". </p>
 <p> 10. Et voila ! Vous avez votre <a href="assets/images/lovebox.png?raw=true">Lovebox</a>. </p>
 
@@ -44,7 +44,7 @@
 
 <h2>💞 Utile 💞</h2>
 
-<p> Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ! </p>
+<p> Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ou essayez cette <a href="https://diy-lovebox.vercel.app/draw.html">page</a>.</p>
 
 #
 
