@@ -11,54 +11,54 @@
 
 <h2>⭐ Requirements ⭐</h2>
 
-<p> ×1 Téléphone + Navigateur </p>
-<p> ×1 Chargeur </p>
-<p> ×1 Réseau Wi-Fi ou données mobile </p>
-<p> ×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) ou utilisé un support pour maintenir votre appareil (<a href="https://github.com/LeBazarDeBryan/DIY_Lovebox#Exemple">Exemple</a>) </p>
+<p>×1 Téléphone + Navigateur / <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox#-optionnel-">Application</a></p>
+<p>×1 Chargeur</p>
+<p>×1 Réseau Wi-Fi / Données mobile</p>
+<p>×1 Boîte (inspirez-vous de la boîte <a href="assets/images/lovebox.png?raw=true">Lovebox</a>) / Support pour maintenir votre appareil (<a href="https://github.com/LeBazarDeBryan/DIY_Lovebox#Exemple">Exemple</a>)</p>
 
 #
 
 <h2>🌟 Étape 🌟</h2>
 
-<p> 1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Forké mon projet</a>. </p>
-<p> 2. Modifiez cette <a href="index.html#L37-L40">ligne</a> si vous voulez mettre un autre nom ou un autre format d'image ou de vidéo. </p>
-<p> 3. Déployez votre projet sur <a href="https://vercel.app">Vercel</a> (Rapide) ou <a href="https://pages.github.com">Github Pages</a> (Long). </p>
-<p> 4. Renommez vos images en "image.png" (ou le nom ou le format que vous avez mis) </p>
-<p> 5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page. </p>
+<p>1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Forké mon projet</a>.</p>
+<p>2. Modifiez cette <a href="index.html#L37-L40">ligne</a> si vous voulez mettre un autre nom ou un autre format d'image ou de vidéo.</p>
+<p>3. Déployez votre projet sur <a href="https://vercel.app">Vercel</a> (Rapide) ou <a href="https://pages.github.com">Github Pages</a> (Long).</p>
+<p>4. Renommez vos images en "image.png" (ou le nom ou le format que vous avez mis)</p>
+<p>5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page.</p>
 
 <h3>↪ Optionnel ↩</h3>
 
-<p> 0. Vous pouvez faire une application Android. (Vous avez besoin d'Android Studio). </p>
-<p> 1. <a href="app">Télécharger ce dossier</a>. </p>
-<p> 2. Ouvrer ce dossier avec <a href="https://developer.android.com/studio">Android Studio</a>. </p>
-<p> 3. Cliquer sur "Project", Aller dans app/java/fr.lebazardebryan.lovebox/MainActivity </p>
-<p> 4. Aller à la ligne 18 puis changer "remplacer avec votre url" avec votre site web. </p>
-<p> 5. Cliquer sur "Build" > "Build Bundle(s) / APK(s)" > Build APK(s) </p>
-<p> 6. Après avoir attendu vous devrais avoir une notification quand c'est fini. Cliquer sur "locate". </p>
-<p> 7. Vous devrais voir un fichier avec le nom "app-debug.apk" c'est l'application. Transférer la sur votre appareil Android. </p>
-<p> 8. Installer l'application sur votre appareil puis ouvrez la. </p>
-<p> 9. Pour rafraichire appuyer sur "Refresh". </p>
-<p> 10. Et voila ! Vous avez votre <a href="assets/images/lovebox.png?raw=true">Lovebox</a>. </p>
+<p>0. Vous pouvez faire une application Android. (Vous avez besoin d'<a href="https://developer.android.com/studio">Android Studio</a>).</p>
+<p>1. <a href="app">Télécharger ce dossier</a>.</p>
+<p>2. Ouvrer ce dossier avec <a href="https://developer.android.com/studio">Android Studio</a>.</p>
+<p>3. Cliquer sur "Project", Aller dans app/java/fr.lebazardebryan.lovebox/MainActivity</p>
+<p>4. Aller à la ligne 18 puis changer "remplacer avec votre url" avec votre site web.</p>
+<p>5. Cliquer sur "Build" > "Build Bundle(s) / APK(s)" > Build APK(s)</p>
+<p>6. Après avoir attendu vous devrais avoir une notification quand c'est fini. Cliquer sur "locate".</p>
+<p>7. Vous devrais voir un fichier avec le nom "app-debug.apk" c'est l'application. Transférer la sur votre appareil Android.</p>
+<p>8. Installer l'application sur votre appareil puis ouvrez la.</p>
+<p>9. Pour rafraichire appuyer sur "Refresh".</p>
+<p>10. Et voila ! Vous avez votre <a href="assets/images/lovebox.png?raw=true">Lovebox</a>.</p>
 
 #
 
 <h2>💞 Utile 💞</h2>
 
-<p> Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ou essayez cette <a href="https://diy-lovebox.vercel.app/draw.html">page</a>.</p>
+<p>Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ou essayez cette <a href="https://diy-lovebox.vercel.app/draw.html">page</a>.</p>
 
 #
 
 <h2>🌠 Demo 🌠</h2>
 
-<p> <a href="https://lebazardebryan.github.io/DIY_Lovebox/"> Github </a></p>
-<p> <a href="https://diy-lovebox.vercel.app/"> Vercel </a></p>
+<p><a href="https://lebazardebryan.github.io/DIY_Lovebox/">Github</a></p>
+<p><a href="https://diy-lovebox.vercel.app/">Vercel</a></p>
 
 #
 
 <h2>Exemple</h2>
 
-<p align="center"><img src="assets/images/image1.png">
+<p align="center"><img src="assets/images/image1.png" />
   
 #
   
-<img src="assets/images/image2.png"></p>
+<img src="assets/images/image2.png" /></p>
