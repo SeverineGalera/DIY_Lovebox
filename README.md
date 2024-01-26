@@ -21,16 +21,16 @@
 <summary><h2>🌟 Étape 🌟</h2></summary>
   <p>1. <a href="https://github.com/LeBazarDeBryan/DIY_Lovebox/fork">Dupliquer mon projet</a>.</p>
   <p>2. Modifiez cette <a href="index.html#L37-L40">ligne</a> si vous voulez mettre un autre nom ou un autre format d'image ou de vidéo.</p>
-  <p>3. Déployez votre projet sur <a href="https://vercel.app">Vercel</a> (Rapide) ou <a href="https://pages.github.com">Github Pages</a> (Long).</p>
+  <p>3. Déployez votre projet sur <a href="https://vercel.app">Vercel</a> (Rapide) ou <a href="https://www.clictune.com/jseR">Github Pages</a> (Long).</p>
   <p>4. Renommez vos images en "image.png" (ou le nom ou le format que vous avez mis)</p>
   <p>5. Mettez vos images dans le <a href="images">dossier images</a> et regarder votre page.</p>
 </details>
 
 <details>
 <summary><h3>↪ Optionnel ↩</h3></summary>
-  <p>0. Vous pouvez faire une application Android. (Vous avez besoin d'<a href="https://developer.android.com/studio">Android Studio</a>).</p>
+  <p>0. Vous pouvez faire une application Android. (Vous avez besoin d'<a href="https://www.clictune.com/jseQ">Android Studio</a>).</p>
   <p>1. <a href="app">Télécharger ce dossier</a>.</p>
-  <p>2. Ouvrer ce dossier avec <a href="https://developer.android.com/studio">Android Studio</a>.</p>
+  <p>2. Ouvrer ce dossier avec <a href="https://www.clictune.com/jseQ">Android Studio</a>.</p>
   <p>3. Cliquer sur "Project", Aller dans app/java/fr.lebazardebryan.lovebox/MainActivity</p>
   <p>4. Aller à la ligne 18 puis changer "remplacer avec votre url" avec votre site web.</p>
   <p>5. Cliquer sur "Build" > "Build Bundle(s) / APK(s)" > Build APK(s)</p>
@@ -43,14 +43,14 @@
 
 <details>
 <summary><h2>💞 Utile 💞</h2></summary>
-  <p>Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ou essayez cette <a href="https://diy-lovebox.vercel.app/draw.html">page</a>.</p>
+  <p>Si vous n'avez pas d'idée d'image téléchargez-en <a href="database">ici</a> ou essayez cette <a href="https://www.clictune.com/jseS">page</a>.</p>
 </details>
 
 
 <details>
 <summary><h2>🌠 Demo 🌠</h2></summary>
-  <p><a href="https://lebazardebryan.github.io/DIY_Lovebox/">Github</a></p>
-       <p><a href="https://diy-lovebox.vercel.app/">Vercel</a></p>
+  <p><a href="https://www.clictune.com/jseT">Github</a></p>
+       <p><a href="https://www.clictune.com/jseY">Vercel</a></p>
 </details>
 
 <details>
